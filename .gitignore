@@ -1,0 +1,7 @@
+RecordScreen.xcodeproj/xcuserdata/
+RecordScreen.xcworkspace/
+Pods/
+*.swp
+Podfile.lock
+.DS_Store
+RecordScreen.xcodeproj/project.xcworkspace/xcuserdata/
