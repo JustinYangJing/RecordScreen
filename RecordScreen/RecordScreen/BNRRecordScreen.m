@@ -38,12 +38,24 @@
     CGSize size = view.frame.size;
     NSDictionary * videoProps = [NSDictionary dictionaryWithObjectsAndKeys:[NSNumber numberWithDouble:size.height*size.width*8],AVVideoAverageBitRateKey, nil];
     
-    NSDictionary *videoSettings = [NSDictionary dictionaryWithObjectsAndKeys:AVVideoCodecTypeH264,
+//    AVVideoCodecH264
+    
+    AVVideoCodecType type;
+    if (@available(iOS 11.0, *)){
+        type = AVVideoCodecTypeH264;
+    }else{
+        type = AVVideoCodecH264;
+    }
+    
+    
+
+    NSDictionary *videoSettings = [NSDictionary dictionaryWithObjectsAndKeys:type,
                                    AVVideoCodecKey,[NSNumber numberWithInt:size.width],
                                    AVVideoWidthKey,[NSNumber numberWithInt:size.height],
                                    AVVideoHeightKey,videoProps,
                                    AVVideoCompressionPropertiesKey,nil];
     self.writerInput = [AVAssetWriterInput assetWriterInputWithMediaType:AVMediaTypeVideo outputSettings:videoSettings];
+    
     self.writerInput.expectsMediaDataInRealTime = YES;
     NSDictionary *sourcePixelBuffAttr = [NSDictionary dictionaryWithObjectsAndKeys:[NSNumber numberWithInt:kCVPixelFormatType_32ARGB],kCVPixelBufferPixelFormatTypeKey, nil];
     self.adaptor = [AVAssetWriterInputPixelBufferAdaptor assetWriterInputPixelBufferAdaptorWithAssetWriterInput:self.writerInput sourcePixelBufferAttributes:sourcePixelBuffAttr];

@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "RecordScreen"
-  s.version      = "1"
+  s.version      = "1.0.0"
   s.summary      = "RecordScreen."
 
   # This description is used to generate tags and improve search results.
@@ -53,7 +53,7 @@ Pod::Spec.new do |s|
   #  profile URL.
   #
 
-  s.author             = { “JustinYang” => “ityangjing@gmail.com” }
+  s.author             = { "JustinYang" => "ityangjing@gmail.com" }
   # Or just: s.author    = “JustinYang”
 
   # ――― Platform Specifics ――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
