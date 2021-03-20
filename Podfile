@@ -6,5 +6,6 @@ source 'https://github.com/CocoaPods/Specs.git'
 target 'RecordScreen' do
   # Uncomment this line if you're using Swift or would like to use dynamic frameworks
   # use_frameworks!
+  pod 'RecordScreen',  '1.0.0'
 
 end
