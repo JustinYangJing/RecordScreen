@@ -1,3 +1,9 @@
+---
+title: ios录制屏幕
+date: 2021-03-25 
+tags: 录制屏幕
+---
+
 ### RecordScreen
 
 -----
@@ -8,5 +14,7 @@
 
 > pod 'RecordScreen'
 
-#### 使用
+#### 
+
+[源码地址](https://github.com/JustinYangJing/RecordScreen)
 
